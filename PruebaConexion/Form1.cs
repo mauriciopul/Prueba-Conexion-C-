@@ -27,6 +27,7 @@ namespace PruebaConexion
         private void Form1_Load(object sender, EventArgs e)
         {
             Conexion c = new Conexion();
+            c.cargarPersonas(dgvPersonas);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace PruebaConexion
             {                
                 MessageBox.Show(c.insertar(Convert.ToInt32(txtId.Text), txtNombre.Text, txtApellido.Text, dtFechaNacim.Text));
                 this.limpiar();
+                c.cargarPersonas(dgvPersonas);
             }
             else
             {

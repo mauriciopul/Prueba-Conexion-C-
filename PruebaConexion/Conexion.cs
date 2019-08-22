@@ -18,6 +18,10 @@ namespace PruebaConexion
         SqlCommand cmd;
         SqlDataReader dr;
 
+        SqlDataAdapter da;
+        DataTable dt;
+        
+
         public Conexion()
         {
             try
@@ -71,6 +75,21 @@ namespace PruebaConexion
                 MessageBox.Show("Error al insertar dato: " + ex.ToString());
             }
             return cont;
+        }
+
+        public void cargarPersonas(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("select * from Persona", cn);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource=dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: "+ex.ToString());
+            }
         }
 
     }
