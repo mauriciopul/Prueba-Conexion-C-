@@ -24,7 +24,7 @@ namespace PruebaConexion
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Conexion c = new Conexion();
         }
     }
 }
