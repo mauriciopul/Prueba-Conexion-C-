@@ -30,20 +30,20 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdBtnRegistrar = new System.Windows.Forms.RadioButton();
-            this.rdBtnEliminar = new System.Windows.Forms.RadioButton();
             this.rdBtnModificar = new System.Windows.Forms.RadioButton();
+            this.rdBtnEliminar = new System.Windows.Forms.RadioButton();
+            this.rdBtnRegistrar = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tbxId = new System.Windows.Forms.TextBox();
-            this.tbxNombre = new System.Windows.Forms.TextBox();
-            this.tbxApellido = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
             this.dtFechaNacim = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -70,16 +70,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CRUD C# - SQL Server";
             // 
-            // rdBtnRegistrar
+            // rdBtnModificar
             // 
-            this.rdBtnRegistrar.AutoSize = true;
-            this.rdBtnRegistrar.Location = new System.Drawing.Point(55, 35);
-            this.rdBtnRegistrar.Name = "rdBtnRegistrar";
-            this.rdBtnRegistrar.Size = new System.Drawing.Size(93, 21);
-            this.rdBtnRegistrar.TabIndex = 0;
-            this.rdBtnRegistrar.TabStop = true;
-            this.rdBtnRegistrar.Text = "Registrar";
-            this.rdBtnRegistrar.UseVisualStyleBackColor = true;
+            this.rdBtnModificar.AutoSize = true;
+            this.rdBtnModificar.Location = new System.Drawing.Point(381, 35);
+            this.rdBtnModificar.Name = "rdBtnModificar";
+            this.rdBtnModificar.Size = new System.Drawing.Size(92, 21);
+            this.rdBtnModificar.TabIndex = 2;
+            this.rdBtnModificar.TabStop = true;
+            this.rdBtnModificar.Text = "Modificar";
+            this.rdBtnModificar.UseVisualStyleBackColor = true;
             // 
             // rdBtnEliminar
             // 
@@ -92,16 +92,16 @@
             this.rdBtnEliminar.Text = "Eliminar";
             this.rdBtnEliminar.UseVisualStyleBackColor = true;
             // 
-            // rdBtnModificar
+            // rdBtnRegistrar
             // 
-            this.rdBtnModificar.AutoSize = true;
-            this.rdBtnModificar.Location = new System.Drawing.Point(381, 35);
-            this.rdBtnModificar.Name = "rdBtnModificar";
-            this.rdBtnModificar.Size = new System.Drawing.Size(92, 21);
-            this.rdBtnModificar.TabIndex = 2;
-            this.rdBtnModificar.TabStop = true;
-            this.rdBtnModificar.Text = "Modificar";
-            this.rdBtnModificar.UseVisualStyleBackColor = true;
+            this.rdBtnRegistrar.AutoSize = true;
+            this.rdBtnRegistrar.Location = new System.Drawing.Point(55, 35);
+            this.rdBtnRegistrar.Name = "rdBtnRegistrar";
+            this.rdBtnRegistrar.Size = new System.Drawing.Size(93, 21);
+            this.rdBtnRegistrar.TabIndex = 0;
+            this.rdBtnRegistrar.TabStop = true;
+            this.rdBtnRegistrar.Text = "Registrar";
+            this.rdBtnRegistrar.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -140,60 +140,63 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Fecha de Nacimiento:";
             // 
-            // tbxId
+            // txtId
             // 
-            this.tbxId.Location = new System.Drawing.Point(180, 129);
-            this.tbxId.Name = "tbxId";
-            this.tbxId.Size = new System.Drawing.Size(233, 20);
-            this.tbxId.TabIndex = 6;
+            this.txtId.Location = new System.Drawing.Point(180, 129);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(233, 20);
+            this.txtId.TabIndex = 6;
             // 
-            // tbxNombre
+            // txtNombre
             // 
-            this.tbxNombre.Location = new System.Drawing.Point(180, 170);
-            this.tbxNombre.Name = "tbxNombre";
-            this.tbxNombre.Size = new System.Drawing.Size(233, 20);
-            this.tbxNombre.TabIndex = 7;
+            this.txtNombre.Location = new System.Drawing.Point(180, 170);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(233, 20);
+            this.txtNombre.TabIndex = 7;
             // 
-            // tbxApellido
+            // txtApellido
             // 
-            this.tbxApellido.Location = new System.Drawing.Point(180, 211);
-            this.tbxApellido.Name = "tbxApellido";
-            this.tbxApellido.Size = new System.Drawing.Size(233, 20);
-            this.tbxApellido.TabIndex = 8;
+            this.txtApellido.Location = new System.Drawing.Point(180, 211);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(233, 20);
+            this.txtApellido.TabIndex = 8;
             // 
             // dtFechaNacim
             // 
+            this.dtFechaNacim.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtFechaNacim.Location = new System.Drawing.Point(180, 252);
             this.dtFechaNacim.Name = "dtFechaNacim";
             this.dtFechaNacim.Size = new System.Drawing.Size(233, 20);
             this.dtFechaNacim.TabIndex = 11;
+            this.dtFechaNacim.Value = new System.DateTime(2019, 8, 7, 0, 0, 0, 0);
             // 
-            // button1
+            // btnAgregar
             // 
-            this.button1.Location = new System.Drawing.Point(482, 129);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregar.Location = new System.Drawing.Point(482, 129);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(86, 23);
+            this.btnAgregar.TabIndex = 12;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // button2
+            // btnEliminar
             // 
-            this.button2.Location = new System.Drawing.Point(482, 166);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEliminar.Location = new System.Drawing.Point(482, 166);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(86, 23);
+            this.btnEliminar.TabIndex = 13;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnModificar
             // 
-            this.button3.Location = new System.Drawing.Point(482, 203);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Modificar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnModificar.Location = new System.Drawing.Point(482, 203);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(86, 23);
+            this.btnModificar.TabIndex = 14;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -201,13 +204,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(592, 532);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dtFechaNacim);
-            this.Controls.Add(this.tbxApellido);
-            this.Controls.Add(this.tbxNombre);
-            this.Controls.Add(this.tbxId);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -236,13 +239,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbxId;
-        private System.Windows.Forms.TextBox tbxNombre;
-        private System.Windows.Forms.TextBox tbxApellido;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.DateTimePicker dtFechaNacim;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
 

@@ -35,7 +35,7 @@ namespace PruebaConexion
 
         public String insertar(int id, string nombre, string apellido, string fecha)
         {
-            string salida = "Se insertó ";
+            string salida = "Se insertó el usuario exitosamente";
             try
             {
                 cmd = new SqlCommand(
