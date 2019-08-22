@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPersonas = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdBtnModificar = new System.Windows.Forms.RadioButton();
@@ -44,6 +47,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -52,11 +56,27 @@
             // 
             this.dgvPersonas.AllowUserToAddRows = false;
             this.dgvPersonas.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPersonas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPersonas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPersonas.Location = new System.Drawing.Point(26, 300);
             this.dgvPersonas.Name = "dgvPersonas";
             this.dgvPersonas.RowHeadersVisible = false;
-            this.dgvPersonas.Size = new System.Drawing.Size(542, 214);
+            this.dgvPersonas.Size = new System.Drawing.Size(402, 156);
             this.dgvPersonas.TabIndex = 0;
             // 
             // groupBox1
@@ -67,7 +87,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(26, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(542, 84);
+            this.groupBox1.Size = new System.Drawing.Size(402, 84);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CRUD C# - SQL Server";
@@ -75,9 +95,10 @@
             // rdBtnModificar
             // 
             this.rdBtnModificar.AutoSize = true;
-            this.rdBtnModificar.Location = new System.Drawing.Point(381, 35);
+            this.rdBtnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtnModificar.Location = new System.Drawing.Point(292, 35);
             this.rdBtnModificar.Name = "rdBtnModificar";
-            this.rdBtnModificar.Size = new System.Drawing.Size(92, 21);
+            this.rdBtnModificar.Size = new System.Drawing.Size(77, 17);
             this.rdBtnModificar.TabIndex = 2;
             this.rdBtnModificar.TabStop = true;
             this.rdBtnModificar.Text = "Modificar";
@@ -86,9 +107,10 @@
             // rdBtnEliminar
             // 
             this.rdBtnEliminar.AutoSize = true;
-            this.rdBtnEliminar.Location = new System.Drawing.Point(218, 35);
+            this.rdBtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtnEliminar.Location = new System.Drawing.Point(168, 35);
             this.rdBtnEliminar.Name = "rdBtnEliminar";
-            this.rdBtnEliminar.Size = new System.Drawing.Size(84, 21);
+            this.rdBtnEliminar.Size = new System.Drawing.Size(69, 17);
             this.rdBtnEliminar.TabIndex = 1;
             this.rdBtnEliminar.TabStop = true;
             this.rdBtnEliminar.Text = "Eliminar";
@@ -97,9 +119,10 @@
             // rdBtnRegistrar
             // 
             this.rdBtnRegistrar.AutoSize = true;
-            this.rdBtnRegistrar.Location = new System.Drawing.Point(55, 35);
+            this.rdBtnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtnRegistrar.Location = new System.Drawing.Point(37, 35);
             this.rdBtnRegistrar.Name = "rdBtnRegistrar";
-            this.rdBtnRegistrar.Size = new System.Drawing.Size(93, 21);
+            this.rdBtnRegistrar.Size = new System.Drawing.Size(76, 17);
             this.rdBtnRegistrar.TabIndex = 0;
             this.rdBtnRegistrar.TabStop = true;
             this.rdBtnRegistrar.Text = "Registrar";
@@ -144,39 +167,39 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(180, 129);
+            this.txtId.Location = new System.Drawing.Point(150, 129);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(233, 20);
+            this.txtId.Size = new System.Drawing.Size(135, 20);
             this.txtId.TabIndex = 6;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(180, 170);
+            this.txtNombre.Location = new System.Drawing.Point(150, 170);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(233, 20);
+            this.txtNombre.Size = new System.Drawing.Size(135, 20);
             this.txtNombre.TabIndex = 7;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(180, 211);
+            this.txtApellido.Location = new System.Drawing.Point(150, 211);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(233, 20);
+            this.txtApellido.Size = new System.Drawing.Size(135, 20);
             this.txtApellido.TabIndex = 8;
             // 
             // dtFechaNacim
             // 
             this.dtFechaNacim.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFechaNacim.Location = new System.Drawing.Point(180, 252);
+            this.dtFechaNacim.Location = new System.Drawing.Point(150, 252);
             this.dtFechaNacim.Name = "dtFechaNacim";
-            this.dtFechaNacim.Size = new System.Drawing.Size(233, 20);
+            this.dtFechaNacim.Size = new System.Drawing.Size(135, 20);
             this.dtFechaNacim.TabIndex = 11;
             this.dtFechaNacim.Value = new System.DateTime(2019, 8, 7, 0, 0, 0, 0);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(482, 129);
+            this.btnAgregar.Location = new System.Drawing.Point(355, 129);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(86, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(73, 23);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -184,28 +207,34 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(482, 166);
+            this.btnEliminar.Location = new System.Drawing.Point(355, 166);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(86, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(73, 23);
             this.btnEliminar.TabIndex = 13;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(482, 203);
+            this.btnModificar.Location = new System.Drawing.Point(355, 203);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(86, 23);
+            this.btnModificar.Size = new System.Drawing.Size(73, 23);
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(592, 532);
+            this.ClientSize = new System.Drawing.Size(453, 480);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
@@ -248,6 +277,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
